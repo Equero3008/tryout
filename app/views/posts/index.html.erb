@@ -1,0 +1,19 @@
+<h1>Blog und so</h1>
+<ul>
+    <%= button_to 'Create', new_post_path, method: :get %>
+    <% @posts.each do |post| %>
+        <li>
+            <h2>
+            <%= post.title %>
+            </h2>
+            <p>
+            <%= post.text %>
+            </p>
+            <div>
+            <%= button_to 'Edit', edit_post_path(post), method: :get %>
+            <%= button_to 'Delete', post_path(post), method: :delete %>
+            <%= button_to 'Single', post_path(post), method: :get %>
+            </div>
+        </li>
+    <% end %>
+</ul>

@@ -1,0 +1,20 @@
+<ul>
+    <%= form_with model: @post do |form| %>
+        <li>
+            <%= form.label :title %>
+            <%= form.text_field :title%>
+        </li>
+        <li>
+            <%= form.label :text %>
+            <%= form.text_area :text%>
+        </li>
+        <li>
+            <%= form.label :published %>
+            <%= form.check_box :published %>
+        </li>
+
+        <li>
+            <%= form.submit %>
+        </li>
+    <% end %>
+</ul>
